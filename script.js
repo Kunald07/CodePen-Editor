@@ -1,0 +1,13 @@
+function run() {
+    let htmlCode = document.getElementById('html-code');
+    let cssCode = document.getElementById('css-code');
+    let jsCode = document.getElementById('JavaScript-code');
+    let output = document.getElementById('Output');
+
+    output.contentDocument.body.innerHTML = htmlCode.value + "<style>" + cssCode.value + "</style>";
+
+    output.contentWindow.eval(jsCode.value);
+}
+
+
+
